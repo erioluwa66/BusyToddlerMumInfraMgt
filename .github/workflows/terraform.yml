@@ -7,7 +7,7 @@ on:
     - develop
     paths:
     - '**.tf'
-    - '.github/workflows/deploy-terraform.yml'  # Adjust the path/name as necessary
+    - '.github/workflows/terraform.yml'  # Adjust the path/name as necessary
 
 jobs:
   terraform:
