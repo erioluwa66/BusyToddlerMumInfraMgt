@@ -7,8 +7,15 @@ data "aws_iam_policy_document" "oidc" {
     }
     condition {
       test     = "StringEquals"
+      variable = "token.actions.githubusercontent.com:aud"
       values   = ["sts.amazonaws.com"]
-      variable = "token.actions.githubuser.content.com:aud"
+    }
+    condition {
+      test     = "StringEquals"
+      variable = "token.actions.githubusercontent.com:sub"
+      values   = [
+        "repo:erioluwa66/BusyToddlerMumInfraMgt:ref:refs/heads/develop"
+      ]
     }
   }
 }

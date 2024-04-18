@@ -6,5 +6,5 @@ resource "aws_iam_openid_connect_provider" "github_oidc" {
 
 resource "aws_iam_role" "github_actions_role" {
   name               = "GithubActionsOIDCRole"
-  assume_role_policy = data.aws_iam_policy_document.oidc
+  assume_role_policy = data.aws_iam_policy_document.oidc.json
 }
