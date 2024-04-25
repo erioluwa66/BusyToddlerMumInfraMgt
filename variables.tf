@@ -9,3 +9,8 @@ variable "oidc_thumbprint" {
   type        = string
   default     = "959cb2b52b4ad201a593847abca32ff48f838c2e"
 }
+
+variable "project_name" {
+  description = "The project name to create resources under"
+  type        = string
+}

@@ -14,7 +14,9 @@ data "aws_iam_policy_document" "oidc" {
       test     = "StringEquals"
       variable = "token.actions.githubusercontent.com:sub"
       values = [
-        "repo:erioluwa66/BusyToddlerMumInfraMgt:ref:refs/heads/develop"
+        "repo:erioluwa66/BusyToddlerMumInfraMgt:ref:refs/heads/develop",
+        "repo:erioluwa66/BusyToddlerMums:ref:refs/heads/develop",
+        "repo:erioluwa66/BusyToddlerMumApi:ref:refs/heads/develop"
       ]
     }
   }
